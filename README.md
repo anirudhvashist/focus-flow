@@ -25,7 +25,7 @@ Then open `http://localhost:8080`.
 
 ## Vercel
 
-The app uses clean routes (`/timer`, `/tasks`, `/notes`) backed by explicit Vercel rewrites. Legacy directory index URLs such as `/timer/index.html` redirect to their clean route.
+The app uses clean routes (`/timer`, `/tasks`, `/notes`) backed by explicit Vercel rewrites. Navigation links point directly to these routes.
 
 ### Option A — Vercel dashboard
 
