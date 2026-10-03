@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f5f2">
+    <title>Tasks — FocusFlow</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body data-page="tasks">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="/index.html"><span class="brand-mark">F</span><span>FocusFlow</span></a>
+            <nav class="nav-list"><a class="nav-item" href="/index.html"><span>⌂</span>Overview</a><a class="nav-item"
+                    href="/timer/index.html"><span>◷</span>Focus timer</a><a class="nav-item active" aria-current="page"
+                    href="/tasks/index.html"><span>✓</span>Tasks</a><a class="nav-item" href="/notes/index.html"><span>✎</span>Notes</a></nav>
+            <div class="sidebar-footer">
+                <p>Keep the list small. Finish the important work first.</p>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">TASK MANAGER</p>
+                    <h1>Turn intentions into finished work.</h1>
+                    <p class="muted">Keep your priorities clear and your next step easy to find.</p>
+                </div><button class="theme-button" id="themeBtn" type="button">☼ <span>Theme</span></button>
+            </header>
+            <section class="section-block">
+                <article class="panel task-manager">
+                    <form id="taskForm" class="task-form"><input id="taskInput" maxlength="120" autocomplete="off"
+                            placeholder="Add a task…" aria-label="New task"><select id="priorityInput"
+                            aria-label="Task priority">
+                            <option value="high">High priority</option>
+                            <option value="medium" selected>Medium priority</option>
+                            <option value="low">Low priority</option>
+                        </select><button class="primary-button" type="submit">Add task</button></form>
+                    <div class="task-toolbar">
+                        <div class="filters" role="group" aria-label="Task filters"><button class="filter-btn active"
+                                data-filter="all" aria-pressed="true">All</button><button class="filter-btn"
+                                data-filter="active" aria-pressed="false">Active</button><button class="filter-btn"
+                                data-filter="completed" aria-pressed="false">Completed</button></div><input class="task-search" id="taskSearch" type="search" placeholder="Search tasks…" aria-label="Search tasks"><button class="ghost-button"
+                            id="clearCompletedBtn" type="button">Clear completed</button>
+                    </div>
+                    <div id="taskList" class="task-list"></div>
+                </article>
+            </section>
+            <footer class="app-footer"><span><strong id="taskTotal">0</strong> tasks stored locally</span><span>Tip:
+                    press Enter to add quickly</span><a class="text-link" href="https://anirudh-vashist.vercel.app/" target="_blank" rel="noopener noreferrer">About Anirudh Vashist ↗</a></footer>
+        </main>
+    </div>
+    <script src="../script.js" defer></script>
+</body>
+
+</html>

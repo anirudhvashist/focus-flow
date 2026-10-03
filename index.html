@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FocusFlow is a clean productivity workspace for deep work, tasks, notes, and Pomodoro sessions.">
+  <meta name="theme-color" content="#f4f5f2">
+  <title>FocusFlow — Focus better. Finish more.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="FocusFlow home">
+        <span class="brand-mark">F</span><span>FocusFlow</span>
+      </a>
+      <nav class="nav-list" aria-label="Primary">
+        <a class="nav-item active" aria-current="page" href="/index.html"><span>⌂</span>Overview</a>
+        <a class="nav-item" href="/timer/index.html"><span>◷</span>Focus timer</a>
+        <a class="nav-item" href="/tasks/index.html"><span>✓</span>Tasks</a>
+        <a class="nav-item" href="/notes/index.html"><span>✎</span>Notes</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="ghost-button full" id="clearDataBtn" type="button">Reset local data</button>
+        <p>Your data stays in this browser.</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="greeting">GOOD EVENING</p>
+          <h1>Make room for work that matters.</h1>
+          <p class="muted">A quieter space to plan your day and do your best work.</p>
+        </div>
+        <button class="theme-button" id="themeBtn" type="button" aria-label="Toggle theme">☼ <span>Theme</span></button>
+      </header>
+
+      <section class="hero-grid">
+        <article class="hero-card gradient-card">
+          <div>
+            <span class="pill">Today</span>
+            <h2 id="dateLabel">Sunday, August 23</h2>
+            <p id="todayProgress">Protect your attention. Choose a priority and give it your full attention.</p>
+          </div>
+          <a class="primary-button" href="/timer/index.html">Start a focus session <span>→</span></a>
+        </article>
+        <article class="quote-card">
+          <span class="quote-mark">“</span>
+          <p id="quoteText">Small focused sessions compound into big results.</p>
+          <span class="muted">FocusFlow principle</span>
+        </article>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading"><div><p class="eyebrow">AT A GLANCE</p><h2>Today’s progress</h2></div></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-icon">✓</div><span class="muted">Completed tasks</span><strong id="taskCount">0</strong><small id="taskTrend">Keep moving</small></article>
+          <article class="stat-card"><div class="stat-icon">◷</div><span class="muted">Focus sessions</span><strong id="sessionCount">0</strong><small id="sessionTrend">Start your first session</small></article>
+          <article class="stat-card"><div class="stat-icon">↗</div><span class="muted">Focus minutes</span><strong id="minuteCount">0</strong><small>Time spent intentionally</small></article>
+          <article class="stat-card"><div class="stat-icon">✳</div><span class="muted">Current streak</span><strong id="streakCount">0</strong><small>Days with a focus session</small></article>
+        </div>
+      </section>
+
+      <section class="section-block two-col">
+        <article class="panel">
+          <div class="section-heading compact"><div><p class="eyebrow">PRIORITY QUEUE</p><h2>Upcoming tasks</h2></div><a class="text-link" href="/tasks/index.html">View all →</a></div>
+          <div id="taskPreview" class="task-preview empty-state">No tasks yet. Add a few priorities for today.</div>
+        </article>
+        <article class="panel">
+          <div class="section-heading compact"><div><p class="eyebrow">QUICK NOTE</p><h2>Scratchpad</h2></div><a class="text-link" href="/notes/index.html">Open notes →</a></div>
+          <div class="note-preview" id="notePreview">Your saved note will appear here.</div>
+        </article>
+      </section>
+
+      <footer class="app-footer"><span>FocusFlow</span><span>Private by design · Works offline</span><a class="text-link" href="https://anirudh-vashist.vercel.app/" target="_blank" rel="noopener noreferrer">About Anirudh Vashist ↗</a></footer>
+    </main>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

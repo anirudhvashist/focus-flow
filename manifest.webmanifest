@@ -1,0 +1,10 @@
+{
+  "name": "FocusFlow",
+  "short_name": "FocusFlow",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07101f",
+  "theme_color": "#0b1220",
+  "description": "A local-first productivity workspace for focus sessions, tasks and notes.",
+  "icons": [{"src":"favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

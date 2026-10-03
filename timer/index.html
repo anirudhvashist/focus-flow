@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f5f2">
+  <title>Focus Timer — FocusFlow</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body data-page="timer">
+  <div class="app-shell">
+    <aside class="sidebar"><a class="brand" href="/index.html"><span class="brand-mark">F</span><span>FocusFlow</span></a>
+      <nav class="nav-list"><a class="nav-item" href="/index.html"><span>⌂</span>Overview</a><a class="nav-item active" aria-current="page"
+          href="/timer/index.html"><span>◷</span>Focus timer</a><a class="nav-item" href="/tasks/index.html"><span>✓</span>Tasks</a><a
+          class="nav-item" href="/notes/index.html"><span>✎</span>Notes</a></nav>
+      <div class="sidebar-footer">
+        <p>Tip: press Space to start/pause.</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">FOCUS TIMER</p>
+          <h1>Protect one block of attention.</h1>
+          <p class="muted">Choose a mode, start the clock, and stay with the task in front of you.</p>
+        </div><button class="theme-button" id="themeBtn" type="button">☼ <span>Theme</span></button>
+      </header>
+      <section class="timer-layout">
+        <article class="timer-card">
+          <div class="timer-modes"><button data-mode="focus" class="mode-btn active">Focus
+              <span>25m</span></button><button data-mode="short" class="mode-btn">Short break
+              <span>5m</span></button><button data-mode="long" class="mode-btn">Long break <span>15m</span></button>
+          </div>
+          <div class="timer-ring">
+            <div class="timer-ring-inner"><span class="muted" id="timerLabel">FOCUS</span><strong
+                id="timer">25:00</strong><span id="timerStatus">Ready when you are.</span></div>
+          </div>
+          <div class="timer-actions"><button class="primary-button" id="timerToggle" type="button">Start
+              session</button><button class="secondary-button" id="timerReset" type="button">Reset</button></div>
+          <div class="timer-meta"><span>Sessions today <strong id="timerSessions">0</strong></span><span>Focused minutes
+              <strong id="timerMinutes">0</strong></span></div>
+        </article>
+        <aside class="panel session-panel">
+          <p class="eyebrow">SESSION INTENTION</p>
+          <h2>What are you working on?</h2><textarea id="sessionIntent" rows="5"
+            placeholder="e.g. Finish linked-list revision questions..."></textarea>
+          <p class="helper">This stays on your device and is restored automatically next time.</p>
+          <div class="mini-card"><span>Next checkpoint</span><strong id="checkpoint">25 minutes of deep work</strong>
+          </div>
+        </aside>
+      </section>
+      <footer class="app-footer"><span>FocusFlow</span><span>Use headphones • Silence notifications • Do one thing
+          well</span><a class="text-link" href="https://anirudh-vashist.vercel.app/" target="_blank" rel="noopener noreferrer">About Anirudh Vashist ↗</a></footer>
+    </main>
+  </div>
+  <script src="../script.js" defer></script>
+</body>
+
+</html>
