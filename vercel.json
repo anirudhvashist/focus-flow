@@ -1,16 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    { "source": "/timer.html", "destination": "/timer", "permanent": false },
-    { "source": "/todo.html", "destination": "/tasks", "permanent": false },
-    { "source": "/notes.html", "destination": "/notes", "permanent": false }
-  ],
-  "rewrites": [
-    { "source": "/timer", "destination": "/timer/index.html" },
-    { "source": "/tasks", "destination": "/tasks/index.html" },
-    { "source": "/notes", "destination": "/notes/index.html" }
-  ],
   "headers": [
     {
       "source": "/sw.js",
