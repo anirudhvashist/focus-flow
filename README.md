@@ -47,4 +47,4 @@ Follow the prompts and choose the project directory containing `index.html`.
 
 ## Important
 
-FocusFlow stores user data in browser `localStorage`, so the data is device/browser-specific. There is no shared account system yet.
+FocusFlow stores user data in browser `localStorage`, so the data is device and browser specific. There is no shared account system yet.

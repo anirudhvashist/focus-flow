@@ -236,11 +236,11 @@ select {
     position: absolute;
     width: 260px;
     height: 260px;
-    border: 1px solid color-mix(in srgb, var(--primary) 14%, transparent);
+    border: 1px solid rgba(53, 104, 88, .14);
     border-radius: 50%;
     right: -90px;
     top: -102px;
-    box-shadow: 0 0 0 27px color-mix(in srgb, var(--primary) 4%, transparent), 0 0 0 55px color-mix(in srgb, var(--primary) 3%, transparent);
+    box-shadow: 0 0 0 27px rgba(53, 104, 88, .04), 0 0 0 55px rgba(53, 104, 88, .03);
     pointer-events: none
 }
 
@@ -298,7 +298,7 @@ select {
 .primary-button:hover {
     background: var(--primary-strong);
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px color-mix(in srgb, var(--primary) 20%, transparent)
+    box-shadow: 0 8px 18px rgba(53, 104, 88, .2)
 }
 
 .quote-card {
@@ -433,7 +433,7 @@ select {
 
 .preview-task:hover,
 .task-row:hover {
-    border-color: color-mix(in srgb, var(--primary) 35%, var(--border));
+    border-color: #b9cbc3;
     transform: translateY(-1px)
 }
 
@@ -531,7 +531,7 @@ select {
 .filter-btn.active {
     background: var(--primary-soft);
     color: var(--primary-strong);
-    border-color: color-mix(in srgb, var(--primary) 15%, transparent)
+    border-color: rgba(53, 104, 88, .15)
 }
 
 .timer-ring {
@@ -666,7 +666,7 @@ select {
 .notes-editor textarea:focus,
 .session-panel textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 12%, transparent)
+    box-shadow: 0 0 0 3px rgba(53, 104, 88, .12)
 }
 
 .task-toolbar {
