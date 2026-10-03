@@ -1,18 +1,16 @@
-const CACHE = 'focusflow-v8';
+const CACHE = 'focusflow-v9';
+const APP_ROOT = new URL('.', self.location).pathname;
+const ROOT_URL = new URL(APP_ROOT, self.location.origin);
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/timer',
-  '/timer/index.html',
-  '/tasks',
-  '/tasks/index.html',
-  '/notes',
-  '/notes/index.html',
-  '/style.css',
-  '/script.js',
-  '/favicon.svg',
-  '/manifest.webmanifest'
-];
+  'index.html',
+  'timer/index.html',
+  'tasks/index.html',
+  'notes/index.html',
+  'style.css',
+  'script.js',
+  'favicon.svg',
+  'manifest.webmanifest'
+].map((asset) => new URL(asset, ROOT_URL).href);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -42,13 +40,14 @@ self.addEventListener('fetch', (event) => {
   if (event.request.mode === 'navigate') {
     event.respondWith((async () => {
       const url = new URL(event.request.url);
-      const route = url.pathname.replace(/\/$/, '');
-      const page = ['/timer', '/tasks', '/notes'].includes(route) ? `${route}/index.html` : route || '/index.html';
+      const route = `/${url.pathname.slice(APP_ROOT.length).replace(/^\/+|\/+$/g, '')}`;
+      const page = ['/timer', '/tasks', '/notes'].includes(route) ? `${route.slice(1)}/index.html` : route === '/' ? 'index.html' : route.slice(1);
+      const pageUrl = new URL(page, ROOT_URL);
       try {
         const response = await fetch(event.request);
         if (response.ok) return response;
       } catch {}
-      return (await caches.match(page)) || (await caches.match('/index.html')) || Response.error();
+      return (await caches.match(pageUrl)) || (await caches.match(new URL('index.html', ROOT_URL))) || Response.error();
     })());
     return;
   }
